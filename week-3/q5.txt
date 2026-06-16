@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> nums(n);
+
+    int actualSum = 0;
+
+    for(int i = 0; i < n; i++) {
+        cin >> nums[i];
+        actualSum += nums[i];
+    }
+
+    int expectedSum = n * (n + 1) / 2;
+
+    cout << expectedSum - actualSum;
+
+    return 0;
+}
